@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "tasks": {
+    "hub": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run --allow-sys cli/main.ts hub run",
+    "pro": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run --allow-sys cli/main.ts",
+    "test": "deno test --allow-read --allow-write --allow-env --allow-net --allow-sys tests/",
+    "check": "deno fmt --check && deno lint && deno check cli/main.ts && deno task test",
+    "compile": "deno run --allow-run --allow-read --allow-write --allow-env scripts/compile.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1"
+  },
+  "fmt": {
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": false
+  },
+  "exclude": [".deno/", "dist/", "coverage/"]
+}

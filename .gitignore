@@ -1,0 +1,6 @@
+dist/
+coverage/
+.deno/
+*.db
+*.db-wal
+*.db-shm
